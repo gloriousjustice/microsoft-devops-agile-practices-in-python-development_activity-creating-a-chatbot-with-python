@@ -12,7 +12,7 @@ An interactive text-based medical diagnosis assistant built in Python using **sp
 
 ---
 
-## 🛠️ Requirements & Setup
+## Requirements & Setup
 
 Make sure you have Python 3.8+ installed on your system. 
 
