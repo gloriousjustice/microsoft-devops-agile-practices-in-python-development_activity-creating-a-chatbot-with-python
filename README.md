@@ -1,63 +1,59 @@
-# AI-Powered Medical Diagnosis Assistant Chatbot
+# NLP-Based Medical Diagnosis Assistant Chatbot
 
-An interactive text-based medical diagnosis assistant built in Python using **spaCy** for Natural Language Processing (NLP). The chatbot analyzes user symptoms, matches them against a pre-defined JSON knowledge base, calculates the likelihood of conditions based on overlapping symptoms, and provides preliminary wellness advice alongside standard medical disclaimers.
-
-## Features
-
-* **Natural Language Processing**: Uses `spaCy` to process unstructured conversational text inputs.
-* **Smart Intent Recognition**: Safely handles lowercase matching and variations of symptom terms.
-* **Weighted Condition Mapping**: Sorts potential medical diagnoses by likelihood according to matching symptom frequencies.
-* **Multi-Turn Conversation**: Continually prompts the user for supplementary symptoms until they type "no", dynamically recalculating diagnoses.
-* **Modular System Design**: Decoupled JSON data persistence layer makes it easy to integrate with web apps like Flask or Django later.
+This project is an intelligent, conversational medical guidance application developed as a practical project within the **Project Development in Python** curriculum, a component of the **Microsoft Python Development Professional Certificate** program on Coursera. The system processes user-reported health symptoms, executes tokenization pipelines, matches entities against a structured medical knowledge base, applies multi-turn conversational loops, and delivers non-diagnostic clinical advice and emergency warnings based on structured data vectors.
 
 ---
 
-## Requirements & Setup
+## Technical Specifications and Scope
 
-Make sure you have Python 3.8+ installed on your system. 
+### Academic and Professional Credential Context
+* Certification Program: Microsoft Python Development Professional Certificate
+* Platform Provider: Coursera
+* Course Focus: Project Development in Python, Natural Language Processing, and Conversational Logic
 
-### 1. Install Dependencies
-Install the required packages. To avoid workspace compatibility conflicts, this application works best with `spaCy` version `3.7.2`:
+### Natural Language Processing and Chatbot Logic
+* NLP Framework Engine: spaCy core architecture running the `en_core_web_sm` English linguistic pipelines
+* Tokenization Pipeline: Iterates through discrete textual token objects via doc strings to extract raw linguistic text attributes
+* Linguistic Normalization: Implements token lowercase conversion protocols using string methods to eliminate classification mismatches
+* Rule-Based Entity Matching: Executes automated array membership operations using conditional membership filters to parse isolated words against target medical arrays
+
+### Algorithmic Processing and Response Optimization
+* Scoring Matrix Sorting: Implements advanced lambda key functions inside Python sorting methods (`sorted()`) to order matching health conditions in descending order based on localized statistical symptom weights
+* Multi-Turn Conversational Architecture: Engineered an interactive `while True` continuous processing engine to capture and aggregate dynamic inputs across continuous conversational iterations
+* Data Layer Merging: Utilizes list modification operators (`.extend()`) to scale contextual tracking arrays on-the-fly, driving continuous backend processing without re-initializing user states
+* Exception & Validation Controls: Configured nested conditional fallbacks to flag unmapped data streams, handle exit queries, and process empty strings safely
+
+### Knowledge Base Data Engineering
+* Data Format Structure: JavaScript Object Notation (JSON) dictionary containing multi-layer nested parameters
+* Modularity Architecture: Engineered file-handling modules utilizing the `json.load()` and `json.dumps()` file-transport serialization layers to separate the knowledge dataset from the core application script
+* Exception Handling Interceptions: Configured robust error isolation blocks to catch file exceptions, system failures, and formatting corruptions during memory operations
+
+---
+
+## Project Performance and Quantifiable Data Points
+
+When preparing resume bullet points or project metrics, utilize the following structural details from this codebase:
+
+### 1. Linguistic Processing and Rule Engineering
+* Search Constraints Managed: Programmed a 2-tier filtering verification loop that verifies if a word matches known symptoms while systematically blocking duplicate array entries
+* Computational Target Mapping: Routes matching operations to map 3 parallel output attributes per condition: string identity variables, exact item frequency metrics, and localized clinical response scripts
+
+### 2. Codebase Engineering and Architecture
+* Pipeline Verification Steps: Configured 4 primary execution layers within the core chatbot workflow: structural file serialization, tokenized symptom extraction, multi-layered frequency ranking, and continuous stateful loop parsing
+
+---
+
+## Project Execution Guide
+
+### 1. Local Environment Deployment
+Install the required natural language processing engines, core English language pipelines, and standard libraries:
 ```bash
-pip install spacy==3.7.2
-```
-
-### 2. Download the English NLP Model
-The chatbot uses spaCy's small core English language model package to tokenize and structuralize conversational variables:
-```bash
+pip install spacy
 python -m spacy download en_core_web_sm
 ```
 
----
-
-## How to Run the Code
-
-1. Save the chatbot program on your computer as a file named `medical_chatbot.py`.
-2. Run the application from your terminal or command prompt:
+### 2. Script Execution
+Run the primary script file inside your environment terminal to build the database and verify the tokenization loop:
 ```bash
-python medical_chatbot.py
+python main.py
 ```
-
----
-
-## How to Use the Chatbot
-
-1. **Initial Concern**: The chatbot will start and ask you: `Please enter your primary concern:`.
-   * *Example input:* `"I have a bad headache and a terrible fever."`
-2. **Dynamic Review**: The program matches your terms against the system's `medical_data.json` schema and reports the most likely conditions first.
-3. **Multi-Turn Extension**: The system then prompts you for more symptoms: `Please enter an additional symptom, or 'no' if you have no more:`.
-   * Add extra terms like `"fatigue"` or `"chills"` to see the match counter increase.
-4. **Exit**: Type `no`, `nope`, or `none` to quit the loop and print your final health summary.
-
----
-
-## Knowledge Base Architecture (`medical_data.json`)
-
-The script automatically generates a local structured dictionary database containing mapping relations like:
-* **Symptoms**: Linked to several target conditions (e.g., `cough` maps to *common cold*, *flu*, *bronchitis*, *pneumonia*, and *allergies*).
-* **Recommendations**: Associated actionable support instructions for individual matches.
-
----
-
-## Medical Disclaimer
-This software application is a rule-based prototype developed for educational and experimental purposes. It does not provide medical advice. It cannot substitute for professional human medical evaluation, triage, diagnosis, or targeted clinical therapy. Always consult an authorized healthcare provider for actual medical concerns.
